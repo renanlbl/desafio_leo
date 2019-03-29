@@ -54,6 +54,18 @@
   </section>
 
   <section class="courses">
+    <div class="form__courses">      
+      <form>
+        <input type="text" placeholder="Título" />
+        <textarea placeholder="Descrição"></textarea>
+        <label>| Capa do curso |</label>
+        <input type="file" />
+        <div class="form__courses--buttons flex">
+          <button type="submit">Salvar</button>
+          <div class="form__close flexHorizontalVertical">Cancelar</div>
+        </div>        
+      </form>
+    </div>
     <div class="container">
       <h2>meus cursos</h2>
       <div class="courses__list flex">
@@ -155,5 +167,6 @@
 
 
 <script src="src/js/slider.js"></script>
+<script src="src/js/form-cursos.js"></script>
 </body>
 </html>
