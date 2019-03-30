@@ -55,13 +55,13 @@
 
   <section class="courses">
     <div class="form__courses">      
-      <form>
-        <input type="text" placeholder="Título" />
-        <textarea placeholder="Descrição"></textarea>
+      <form id="form__courses--add" method="POST">
+        <input type="text" placeholder="Título" name="titulo" />
+        <textarea name="descricao" placeholder="Descrição"></textarea>
         <label>| Capa do curso |</label>
-        <input type="file" />
+        <input name="photo" type="file" />
         <div class="form__courses--buttons flex">
-          <button type="submit">Salvar</button>
+          <button id="button__courses--submit" type="submit">Salvar</button>
           <div class="form__close flexHorizontalVertical">Cancelar</div>
         </div>        
       </form>
@@ -76,55 +76,7 @@
             <p>Lorem, ipsum dolor sit amet pallentesque malesuada, a phareta augue</p>
           </div>
           <a class="courses__button flexHorizontalVertical" href="#">ver curso</a>
-        </div>
-        <div class="courses__card">
-          <img src="src/assets/course.jpg" />
-          <div class="courses__card--description">
-            <h4>pellentesque malesuada</h4>
-            <p>Lorem, ipsum dolor sit amet pallentesque malesuada, a phareta augue</p>
-          </div>
-          <a class="courses__button flexHorizontalVertical" href="#">ver curso</a>
-        </div>
-        <div class="courses__card">
-          <img src="src/assets/course.jpg" />
-          <div class="courses__card--description">
-            <h4>pellentesque malesuada</h4>
-            <p>Lorem, ipsum dolor sit amet pallentesque malesuada, a phareta augue</p>
-          </div>
-          <a class="courses__button flexHorizontalVertical" href="#">ver curso</a>
-        </div>
-        <div class="courses__card">
-          <img src="src/assets/course.jpg" />
-          <div class="courses__card--description">
-            <h4>pellentesque malesuada</h4>
-            <p>Lorem, ipsum dolor sit amet pallentesque malesuada, a phareta augue</p>
-          </div>
-          <a class="courses__button flexHorizontalVertical" href="#">ver curso</a>
-        </div>
-        <div class="courses__card">
-          <img src="src/assets/course.jpg" />
-          <div class="courses__card--description">
-            <h4>pellentesque malesuada</h4>
-            <p>Lorem, ipsum dolor sit amet pallentesque malesuada, a phareta augue</p>
-          </div>
-          <a class="courses__button flexHorizontalVertical" href="#">ver curso</a>
-        </div>
-        <div class="courses__card">
-          <img src="src/assets/course.jpg" />
-          <div class="courses__card--description">
-            <h4>pellentesque malesuada</h4>
-            <p>Lorem, ipsum dolor sit amet pallentesque malesuada, a phareta augue</p>
-          </div>
-          <a class="courses__button flexHorizontalVertical" href="#">ver curso</a>
-        </div>
-        <div class="courses__card">
-          <img src="src/assets/course.jpg" />
-          <div class="courses__card--description">
-            <h4>pellentesque malesuada</h4>
-            <p>Lorem, ipsum dolor sit amet pallentesque malesuada, a phareta augue</p>
-          </div>
-          <a class="courses__button flexHorizontalVertical" href="#">ver curso</a>
-        </div>
+        </div>        
         <div class="courses__add flexHorizontalVertical flexColumn">
             <i class="far fa-calendar-plus"></i>
             <p>adicionar <br/> curso</p>            
