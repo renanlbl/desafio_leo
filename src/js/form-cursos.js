@@ -8,6 +8,8 @@ let course = {}
 onSubmit()
 openForm()
 closeForm() 
+loadStore()
+selectAll()
 
 function openForm () {
   buttonAdd.addEventListener('click', function() {
@@ -53,6 +55,7 @@ function onSubmit () {
 
     getPhoto().then(function(content) {
       course['photo'] = content
+      insertStore(course)
       addCourse(course)
     }, function(e) {
       console.error(e)
@@ -62,7 +65,6 @@ function onSubmit () {
   }) 
 }
 
-
 function clearForm() {
   fields.forEach((item, index) => {
     item.value = ''
@@ -70,9 +72,41 @@ function clearForm() {
   formWrapper.style.display = 'none'
 }
 
+function selectAll() {
+  let courses = loadStore()
+
+  courses.forEach(course => {
+    addCourse(course)
+  })
+}
+
+function loadStore() {
+  let courses = []
+
+  if (localStorage.getItem("courses")) {
+    courses = JSON.parse(localStorage.getItem("courses"))
+  } 
+
+  return courses
+}
+
+function insertStore(data) {
+
+  let courses = loadStore()
+
+  if (localStorage.getItem("courses")) {
+    courses = JSON.parse(localStorage.getItem("courses"))
+  }  
+
+  courses.push(data)
+
+  localStorage.setItem("courses", JSON.stringify(courses))
+}
+
 function addCourse(dataCourse) { 
   let divList = document.querySelector('.courses__list')
-  let div = document.createElement('div') 
+  let div = document.createElement('div')   
+
   div.classList.add('courses__card')
   div.innerHTML = `   
     <img src="${dataCourse.photo}" />
