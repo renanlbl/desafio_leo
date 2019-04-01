@@ -6,7 +6,7 @@ section.modal
   width: 100%
   height: 100%
   background: rgba(0, 0, 0, 0.7)
-  z-index: 20
+  z-index: 9999 
 
   .modal__wrapper
     position: relative
@@ -63,3 +63,14 @@ section.modal
       border-radius: 30px
       margin: 0 auto
 
+@media screen and (max-width: 500px)
+  section.modal
+    .modal__wrapper
+      .modal__img
+        height: 140px
+
+      h2
+        font-size: 17px
+
+      p 
+        font-size: 14px
