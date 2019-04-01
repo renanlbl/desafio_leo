@@ -7,6 +7,34 @@ header
   .header__wrapper
     height: 96px
 
+  .header__hamburguer
+    margin-right: 10px
+    display: none
+
+    i
+      cursor: pointer
+      font-size: 25px
+
+    .nav__mobile 
+      display: none
+      ul 
+        display: none
+        background: #eee
+        z-index: 9999
+        width: 100%
+        position: absolute
+        left: 0
+        top: 80px
+      li
+        border-bottom: 1px solid black        
+        a
+          width: 100%         
+          display: block
+          padding: 15px 0
+          text-align: center
+          text-decoration: none
+          color: #919191
+
   a.header__logo
     display: block
     width: 130px
@@ -61,9 +89,47 @@ header
     
     .account__openUser
       cursor: pointer
+      position: relative
+    
 
+      nav       
+        display: none
+        position: absolute
+        transform: translateX(-70%)
+        z-index: 99
+        background: #ffffff
+        border: 1px solid black
+        ul
+          width: 100px          
+          list-style-type: none         
+        li 
+          width: 100%
+          border-bottom: 1px solid black
+          a
+            padding: 10px 0
+            display: block
+            width: 100%
+            text-align: center
+            text-decoration: none
+            color: #919191
+  
+    &:hover
+      nav
+        display: block      
+  
+    
 @media screen and (max-width: 768px) 
   header 
     .input__wrapper
       display: none
+
+    .header__wrapper--right
+      display: none
+      
+    .header__hamburguer
+      display: block
+
+      .nav__mobile
+        ul
+          display: block
   

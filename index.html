@@ -13,6 +13,20 @@
     <div class="container">
       <div class="header__wrapper flexVertical flexSpaceBetween">
         <a class="header__logo" target="_blank" href="https://leolearning.com/"></a>
+        <div class="header__hamburguer">
+          <i class="fas fa-bars"></i>
+          <nav class="nav__mobile">
+            <ul>
+              <li><a href=#>LINK 1</a></li>
+              <li><a href=#>LINK 2</a></li>
+              <li><a href=#>LINK 3</a></li>
+              <li><a href=#>LINK 4</a></li>
+              <li><a href=#>LINK 5</a></li>
+              <li><a href=#>LINK 6</a></li>
+              <li><a href=#>LINK 7</a></li>
+            </ul>
+          </nav>
+        </div>
         <div class="header__wrapper--right flexVertical">
           <div class="input__wrapper flexVertical">
             <input type="search" placeholder="Pesquisar cursos...">
@@ -25,7 +39,16 @@
               <span>Seja bem-vindo</span>
               <p>John Doe</p>
             </div>
-            <div class="account__openUser"><i class="fas fa-chevron-down"></i></div>
+            <div class="account__openUser">
+              <i class="fas fa-chevron-down"></i>
+              <nav class="account__nav">
+                <ul>
+                  <li><a href="#">Menu 1</a></li>
+                  <li><a href="#">Menu 2</a></li>
+                  <li><a href="#">Menu 3</a></li>
+                </ul>
+              </nav>
+            </div>
           </div>
         </div>
       </div>
@@ -108,7 +131,9 @@
       <h2>meus cursos</h2>
       <div class="courses__list flex">
         <div class="courses__card">
-          <img src="src/assets/course.jpg" />
+          <div>
+            <img src="src/assets/course.jpg" />
+          </div>
           <div class="courses__card--description">
             <h4>pellentesque malesuada</h4>
             <p>Lorem, ipsum dolor sit amet pallentesque malesuada, a phareta augue</p>
@@ -167,13 +192,13 @@
         <div class="container">
           <p>Copyright 2017 - All right reserved</p>
         </div>
-      </div>
-      <div class="footer__space"></div>  
+      </div>      
   </footer>
 
 
 <script src="src/js/slider.js"></script>
 <script src="src/js/form-cursos.js"></script>
 <script src="src/js/modal.js"></script>
+<script src="src/js/menu-hamburguer.js"></script>
 </body>
 </html>

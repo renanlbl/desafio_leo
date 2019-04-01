@@ -10,7 +10,6 @@ openForm()
 closeForm() 
 loadStore()
 selectAll()
-selectAll2()
 
 function openForm () {
   buttonAdd.addEventListener('click', function() {
