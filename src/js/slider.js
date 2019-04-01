@@ -20,7 +20,7 @@
       dotsWrapper.innerHTML += '<span class="slider__dots"></span>'
     }    
    }
-   imgs[0].style.display = 'block' 
+   imgs[0].style.display = 'flex' 
  }
 
 function toggleBullets (index) {
@@ -37,7 +37,7 @@ function toggleBullets (index) {
     bullets[i].addEventListener('click', function() {      
       imgs[currentIndex].style.display = 'none'
       currentIndex = i
-      imgs[currentIndex].style.display = 'block'
+      imgs[currentIndex].style.display = 'flex'
       toggleBullets(i)
     })
   }
@@ -49,7 +49,7 @@ function toggleBullets (index) {
       return false
     } else {
         imgs[currentIndex].style.display = 'none' 
-        imgs[--currentIndex].style.display = 'block'  
+        imgs[--currentIndex].style.display = 'flex'  
         toggleBullets(currentIndex)
     }
   })
@@ -58,7 +58,7 @@ function toggleBullets (index) {
       return false
     } else {
         imgs[currentIndex].style.display = 'none' 
-        imgs[++currentIndex].style.display = 'block'  
+        imgs[++currentIndex].style.display = 'flex'  
         toggleBullets(currentIndex)
     }
   })

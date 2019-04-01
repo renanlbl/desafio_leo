@@ -10,6 +10,7 @@ openForm()
 closeForm() 
 loadStore()
 selectAll()
+selectAll2()
 
 function openForm () {
   buttonAdd.addEventListener('click', function() {
@@ -55,7 +56,7 @@ function onSubmit () {
 
     getPhoto().then(function(content) {
       course['photo'] = content
-      insertStore(course)
+      insertStore(course)      
       addCourse(course)
     }, function(e) {
       console.error(e)
@@ -90,8 +91,13 @@ function loadStore() {
   return courses
 }
 
+
 function insertStore(data) {
 
+  if (loadStore().length === 5) {
+    alert('Você excedeu o limite do localstore.')
+  }
+  
   let courses = loadStore()
 
   if (localStorage.getItem("courses")) {
@@ -102,6 +108,7 @@ function insertStore(data) {
 
   localStorage.setItem("courses", JSON.stringify(courses))
 }
+
 
 function addCourse(dataCourse) { 
   let divList = document.querySelector('.courses__list')

@@ -15,7 +15,7 @@ section.slider
     background-repeat: no-repeat
 
   .slider__arrowLeft
-    z-index: 10
+    z-index: 99
     cursor: pointer
     position: absolute
     left: 20px
@@ -23,7 +23,7 @@ section.slider
     color: #efe7e4
 
   .slider__arrowRight
-    z-index: 10
+    z-index: 99
     cursor: pointer
     position: absolute
     right: 20px
@@ -78,3 +78,12 @@ section.slider
       color: #fff
       border: 1px solid #fff
 
+@media screen and (max-width: 1024px)
+  section.slider
+    .slider__info
+      margin: 0 auto
+
+@media screen and (max-width: 768px)
+  section.slider
+    .slider__info
+      width: 330px
